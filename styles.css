@@ -1019,6 +1019,194 @@ a {
   transform: rotate(45deg);
 }
 
+.project-heading-note {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pricewise-project {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 25px 65px rgba(25, 49, 90, 0.08);
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 52px);
+}
+
+.pricewise-intro {
+  align-items: end;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(210px, 0.75fr) minmax(280px, 1.25fr) auto;
+  margin-bottom: 45px;
+}
+
+.pricewise-label {
+  color: #20a957;
+  font-family: var(--mono);
+  font-size: 0.57rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.pricewise-intro h3 {
+  font-size: clamp(2.6rem, 5vw, 5.2rem);
+  letter-spacing: -0.065em;
+  line-height: 0.9;
+}
+
+.pricewise-intro > p {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.75;
+  max-width: 570px;
+}
+
+.pricewise-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.pricewise-tags span {
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.5rem;
+  padding: 7px 11px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.gallery-header {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+}
+
+.gallery-header p {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.gallery-header p span,
+.gallery-hint b {
+  color: #20a957;
+}
+
+.pricewise-gallery {
+  display: flex;
+  gap: 22px;
+  margin-inline: calc(clamp(24px, 4vw, 52px) * -1);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding: 8px clamp(24px, 4vw, 52px) 24px;
+  scroll-behavior: smooth;
+  scroll-padding-inline: clamp(24px, 4vw, 52px);
+  scroll-snap-type: x mandatory;
+  scrollbar-color: #20a957 #e8f1e8;
+  scrollbar-width: thin;
+}
+
+.pricewise-gallery:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 5px;
+}
+
+.pricewise-gallery::-webkit-scrollbar {
+  height: 7px;
+}
+
+.pricewise-gallery::-webkit-scrollbar-track {
+  background: #e8f1e8;
+  border-radius: 99px;
+}
+
+.pricewise-gallery::-webkit-scrollbar-thumb {
+  background: #20a957;
+  border-radius: 99px;
+}
+
+.pricewise-slide {
+  background: #fbf6f5;
+  border: 1px solid #eee4e2;
+  border-radius: 16px;
+  flex: 0 0 min(76vw, 360px);
+  overflow: hidden;
+  scroll-margin-inline: clamp(24px, 4vw, 52px);
+  scroll-snap-align: start;
+}
+
+.pricewise-slide--overview {
+  flex-basis: min(88vw, 880px);
+}
+
+.pricewise-slide img {
+  display: block;
+  height: min(68vh, 710px);
+  object-fit: contain;
+  width: 100%;
+}
+
+.pricewise-slide figcaption {
+  align-items: center;
+  background: var(--white);
+  border-top: 1px solid var(--line);
+  display: flex;
+  font-size: 0.68rem;
+  font-weight: 700;
+  gap: 12px;
+  padding: 15px 18px;
+}
+
+.pricewise-slide figcaption span {
+  color: #20a957;
+  font-family: var(--mono);
+  font-size: 0.55rem;
+}
+
+.gallery-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 24px;
+}
+
+.gallery-index a {
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--muted);
+  display: inline-flex;
+  font-family: var(--mono);
+  font-size: 0.48rem;
+  height: 31px;
+  justify-content: center;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+  width: 31px;
+}
+
+.gallery-index a:hover,
+.gallery-index a:focus-visible {
+  background: #20a957;
+  border-color: #20a957;
+  color: var(--white);
+  outline: none;
+}
+
 .timeline {
   border-top: 1px solid var(--line);
 }
@@ -1282,6 +1470,17 @@ footer {
     opacity: 0.55;
     right: -220px;
   }
+
+  .pricewise-intro {
+    align-items: start;
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+
+  .pricewise-tags {
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 700px) {
@@ -1362,6 +1561,37 @@ footer {
 
   .certificate-details {
     padding: 30px 24px;
+  }
+
+  .pricewise-project {
+    border-radius: 16px;
+  }
+
+  .pricewise-intro {
+    gap: 20px;
+    grid-template-columns: 1fr;
+    margin-bottom: 35px;
+  }
+
+  .pricewise-tags {
+    grid-column: auto;
+  }
+
+  .gallery-hint {
+    max-width: 145px;
+    text-align: right;
+  }
+
+  .pricewise-slide {
+    flex-basis: 82vw;
+  }
+
+  .pricewise-slide--overview {
+    flex-basis: 88vw;
+  }
+
+  .pricewise-slide img {
+    height: min(64vh, 620px);
   }
 
   .skill-row p {
