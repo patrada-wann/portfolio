@@ -181,28 +181,11 @@ a {
   position: relative;
 }
 
-.eyebrow,
 .section-number {
   color: var(--blue);
   font-family: var(--mono);
   font-size: 0.68rem;
   letter-spacing: 0.12em;
-}
-
-.eyebrow {
-  align-items: center;
-  display: flex;
-  gap: 10px;
-  margin-bottom: 24px;
-}
-
-.eyebrow span {
-  animation: pulse 2s infinite;
-  background: var(--blue);
-  border-radius: 50%;
-  box-shadow: 0 0 0 5px var(--blue-soft);
-  height: 7px;
-  width: 7px;
 }
 
 .hero h1 {
@@ -968,12 +951,6 @@ footer {
   display: flex;
   height: 74px;
   justify-content: space-between;
-}
-
-@keyframes pulse {
-  50% {
-    box-shadow: 0 0 0 8px rgba(21, 93, 252, 0.06);
-  }
 }
 
 @keyframes cat-walk {
