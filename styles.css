@@ -87,12 +87,32 @@ a {
   will-change: transform;
 }
 
+.cat-one {
+  animation-delay: 0s;
+}
+
+.cat-two {
+  animation-delay: -6s;
+}
+
+.cat-three {
+  animation-delay: -12s;
+}
+
 .cat-runner > span {
   animation: cat-step 0.42s ease-in-out infinite alternate;
   display: block;
   filter: drop-shadow(0 4px 5px rgba(16, 26, 48, 0.18));
   font-size: 1.6rem;
   line-height: 1;
+}
+
+.cat-two > span {
+  animation-delay: -0.21s;
+}
+
+.cat-three > span {
+  animation-delay: -0.1s;
 }
 
 .brand {
