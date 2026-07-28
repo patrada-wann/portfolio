@@ -2165,7 +2165,7 @@ a {
   align-items: center;
   border-top: 1px solid var(--line);
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-top: 130px;
   padding-top: 24px;
   position: relative;
