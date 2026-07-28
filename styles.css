@@ -1207,6 +1207,152 @@ a {
   outline: none;
 }
 
+.mocca-project {
+  background: #f2e8dc;
+  border: 1px solid #ddc9b3;
+  border-radius: 22px;
+  box-shadow: 0 25px 65px rgba(91, 59, 41, 0.12);
+  margin-top: 42px;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 52px);
+}
+
+.mocca-intro {
+  align-items: end;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(210px, 0.75fr) minmax(280px, 1.25fr) auto;
+  margin-bottom: 45px;
+}
+
+.mocca-label {
+  color: #b95c43;
+  font-family: var(--mono);
+  font-size: 0.57rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.mocca-intro h3 {
+  font-size: clamp(2.6rem, 5vw, 5.2rem);
+  letter-spacing: -0.065em;
+  line-height: 0.9;
+}
+
+.mocca-intro h3 span {
+  color: #b95c43;
+}
+
+.mocca-intro > p {
+  color: #74645a;
+  font-size: 0.8rem;
+  line-height: 1.75;
+  max-width: 590px;
+}
+
+.mocca-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.mocca-tags span {
+  border: 1px solid #d3bca5;
+  border-radius: 99px;
+  color: #74645a;
+  font-family: var(--mono);
+  font-size: 0.5rem;
+  padding: 7px 11px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.mocca-gallery-header {
+  border-color: #d8c5b2;
+}
+
+.mocca-gallery-header p span,
+.mocca-gallery-header .gallery-hint b {
+  color: #b95c43;
+}
+
+.mocca-gallery {
+  display: flex;
+  gap: 22px;
+  margin-inline: calc(clamp(24px, 4vw, 52px) * -1);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding: 8px clamp(24px, 4vw, 52px) 24px;
+  scroll-behavior: smooth;
+  scroll-padding-inline: clamp(24px, 4vw, 52px);
+  scroll-snap-type: x mandatory;
+  scrollbar-color: #b95c43 #dfd0c0;
+  scrollbar-width: thin;
+}
+
+.mocca-gallery:focus-visible {
+  outline: 2px solid #b95c43;
+  outline-offset: 5px;
+}
+
+.mocca-gallery::-webkit-scrollbar {
+  height: 7px;
+}
+
+.mocca-gallery::-webkit-scrollbar-track {
+  background: #dfd0c0;
+  border-radius: 99px;
+}
+
+.mocca-gallery::-webkit-scrollbar-thumb {
+  background: #b95c43;
+  border-radius: 99px;
+}
+
+.mocca-slide {
+  background: #c1a88f;
+  border: 1px solid #d3bca5;
+  border-radius: 16px;
+  flex: 0 0 min(76vw, 360px);
+  overflow: hidden;
+  scroll-margin-inline: clamp(24px, 4vw, 52px);
+  scroll-snap-align: start;
+}
+
+.mocca-slide--overview {
+  flex-basis: min(88vw, 880px);
+}
+
+.mocca-slide img {
+  display: block;
+  height: min(68vh, 710px);
+  object-fit: contain;
+  width: 100%;
+}
+
+.mocca-slide figcaption {
+  align-items: center;
+  background: #fffaf4;
+  border-top: 1px solid #d8c5b2;
+  display: flex;
+  font-size: 0.68rem;
+  font-weight: 700;
+  gap: 12px;
+  padding: 15px 18px;
+}
+
+.mocca-slide figcaption span {
+  color: #b95c43;
+  font-family: var(--mono);
+  font-size: 0.55rem;
+}
+
+.mocca-gallery-index a:hover,
+.mocca-gallery-index a:focus-visible {
+  background: #b95c43;
+  border-color: #b95c43;
+}
+
 .roomie-project {
   background: #f8f7f2;
   border: 1px solid #deddd7;
@@ -2202,6 +2348,17 @@ footer {
     grid-column: 1 / -1;
   }
 
+  .mocca-intro {
+    align-items: start;
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+
+  .mocca-tags {
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-column: 1 / -1;
+  }
+
   .roomie-intro {
     align-items: start;
     grid-template-columns: 0.75fr 1.25fr;
@@ -2341,6 +2498,32 @@ footer {
   }
 
   .pricewise-slide img {
+    height: min(64vh, 620px);
+  }
+
+  .mocca-project {
+    border-radius: 16px;
+  }
+
+  .mocca-intro {
+    gap: 20px;
+    grid-template-columns: 1fr;
+    margin-bottom: 35px;
+  }
+
+  .mocca-tags {
+    grid-column: auto;
+  }
+
+  .mocca-slide {
+    flex-basis: 82vw;
+  }
+
+  .mocca-slide--overview {
+    flex-basis: 88vw;
+  }
+
+  .mocca-slide img {
     height: min(64vh, 620px);
   }
 
