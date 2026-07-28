@@ -476,6 +476,88 @@ a {
   font-size: 0.78rem;
 }
 
+.certificates-section {
+  border-bottom: 1px solid var(--line);
+}
+
+.certificate-placeholder {
+  background:
+    linear-gradient(135deg, rgba(21, 93, 252, 0.96), rgba(11, 58, 164, 0.98));
+  border-radius: 18px;
+  box-shadow: 0 30px 70px rgba(21, 93, 252, 0.18);
+  color: var(--white);
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1.7fr auto;
+  min-height: 290px;
+  overflow: hidden;
+  padding: 45px;
+  position: relative;
+}
+
+.certificate-placeholder::before,
+.certificate-placeholder::after {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  content: "";
+  height: 330px;
+  position: absolute;
+  right: -90px;
+  top: -150px;
+  width: 330px;
+}
+
+.certificate-placeholder::after {
+  height: 220px;
+  right: -35px;
+  top: -95px;
+  width: 220px;
+}
+
+.certificate-placeholder > * {
+  position: relative;
+  z-index: 2;
+}
+
+.certificate-placeholder > div {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.certificate-icon {
+  align-items: center;
+  background: var(--white);
+  border-radius: 12px;
+  color: var(--blue);
+  display: flex;
+  font-size: 1.3rem;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
+}
+
+.certificate-placeholder p {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.certificate-placeholder h3 {
+  align-self: center;
+  font-size: clamp(1.7rem, 3vw, 3rem);
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+
+.certificate-number {
+  align-self: end;
+  color: rgba(255, 255, 255, 0.45);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+}
+
 .row-arrow {
   color: var(--blue);
   font-size: 1.2rem;
@@ -1005,6 +1087,22 @@ footer {
     gap: 7px 15px;
     grid-template-columns: 32px 1fr 28px;
     padding: 24px 0;
+  }
+
+  .certificate-placeholder {
+    grid-template-columns: 1fr;
+    min-height: 340px;
+    padding: 30px;
+  }
+
+  .certificate-placeholder h3 {
+    align-self: start;
+  }
+
+  .certificate-number {
+    bottom: 30px;
+    position: absolute;
+    right: 30px;
   }
 
   .skill-row p {
