@@ -71,8 +71,8 @@ a {
 }
 
 .walking-cat {
-  bottom: -2px;
-  height: 32px;
+  bottom: 0;
+  height: 34px;
   left: 0;
   pointer-events: none;
   position: absolute;
@@ -82,37 +82,149 @@ a {
 
 .cat-runner {
   animation: cat-walk 18s linear infinite;
+  bottom: 0;
   display: block;
+  height: 29px;
   position: absolute;
+  width: 64px;
   will-change: transform;
 }
 
 .cat-one {
   animation-delay: 0s;
+  color: #cf7a3f;
 }
 
 .cat-two {
   animation-delay: -6s;
+  color: #26344f;
 }
 
 .cat-three {
   animation-delay: -12s;
+  color: #9a806b;
 }
 
-.cat-runner > span {
-  animation: cat-step 0.42s ease-in-out infinite alternate;
+.pixel-cat {
   display: block;
-  filter: drop-shadow(0 4px 5px rgba(16, 26, 48, 0.18));
-  font-size: 1.6rem;
-  line-height: 1;
+  height: 29px;
+  image-rendering: pixelated;
+  position: relative;
+  width: 64px;
 }
 
-.cat-two > span {
-  animation-delay: -0.21s;
+.pixel-body,
+.pixel-head,
+.pixel-ear,
+.pixel-leg,
+.pixel-tail {
+  background: currentColor;
+  display: block;
+  position: absolute;
 }
 
-.cat-three > span {
-  animation-delay: -0.1s;
+.pixel-body {
+  box-shadow: 2px 2px 0 rgba(16, 26, 48, 0.16);
+  height: 13px;
+  left: 14px;
+  top: 7px;
+  width: 31px;
+  z-index: 2;
+}
+
+.pixel-head {
+  height: 14px;
+  left: 2px;
+  top: 7px;
+  width: 14px;
+  z-index: 4;
+}
+
+.pixel-head::before,
+.pixel-head::after {
+  content: "";
+  height: 2px;
+  position: absolute;
+  top: 5px;
+  width: 2px;
+}
+
+.pixel-head::before {
+  background: #f7fbff;
+  left: 3px;
+}
+
+.pixel-head::after {
+  background: #101a30;
+  left: 1px;
+  top: 9px;
+}
+
+.pixel-ear {
+  height: 5px;
+  top: 3px;
+  width: 5px;
+  z-index: 3;
+}
+
+.pixel-ear-left {
+  left: 3px;
+}
+
+.pixel-ear-right {
+  left: 10px;
+}
+
+.pixel-tail {
+  animation: pixel-tail-swish 0.64s steps(2, end) infinite;
+  box-shadow:
+    5px -4px 0 currentColor,
+    9px -8px 0 currentColor;
+  height: 4px;
+  left: 43px;
+  top: 8px;
+  transform-origin: left center;
+  width: 10px;
+  z-index: 1;
+}
+
+.pixel-leg {
+  height: 9px;
+  top: 20px;
+  width: 4px;
+  z-index: 1;
+}
+
+.pixel-leg-a {
+  animation: pixel-leg-forward 0.32s steps(2, end) infinite;
+  left: 17px;
+}
+
+.pixel-leg-b {
+  animation: pixel-leg-back 0.32s steps(2, end) infinite;
+  left: 24px;
+  opacity: 0.72;
+}
+
+.pixel-leg-c {
+  animation: pixel-leg-back 0.32s steps(2, end) infinite;
+  left: 35px;
+}
+
+.pixel-leg-d {
+  animation: pixel-leg-forward 0.32s steps(2, end) infinite;
+  left: 41px;
+  opacity: 0.72;
+}
+
+.cat-two .pixel-leg,
+.cat-two .pixel-tail {
+  animation-delay: -0.16s;
+}
+
+.cat-three .pixel-leg,
+.cat-three .pixel-tail {
+  animation-delay: -0.08s;
 }
 
 .brand {
@@ -979,17 +1091,43 @@ footer {
   }
 
   to {
-    transform: translateX(-60px);
+    transform: translateX(-74px);
   }
 }
 
-@keyframes cat-step {
-  from {
-    transform: translateY(0) rotate(-2deg);
+@keyframes pixel-leg-forward {
+  0%,
+  49% {
+    transform: translateX(-2px);
   }
 
-  to {
-    transform: translateY(-3px) rotate(2deg);
+  50%,
+  100% {
+    transform: translateX(2px);
+  }
+}
+
+@keyframes pixel-leg-back {
+  0%,
+  49% {
+    transform: translateX(2px);
+  }
+
+  50%,
+  100% {
+    transform: translateX(-2px);
+  }
+}
+
+@keyframes pixel-tail-swish {
+  0%,
+  49% {
+    transform: translateY(0);
+  }
+
+  50%,
+  100% {
+    transform: translateY(2px);
   }
 }
 
@@ -1095,11 +1233,12 @@ footer {
   }
 
   .walking-cat {
-    height: 26px;
+    height: 30px;
   }
 
-  .cat-runner > span {
-    font-size: 1.25rem;
+  .pixel-cat {
+    transform: scale(0.88);
+    transform-origin: bottom left;
   }
 
   .hero {
