@@ -422,69 +422,6 @@ a {
   margin-top: 12px;
 }
 
-.about {
-  border-top: 1px solid var(--line);
-}
-
-.about-grid {
-  display: grid;
-  gap: 12%;
-  grid-template-columns: 44% 44%;
-}
-
-.lead {
-  font-size: clamp(1.55rem, 2.4vw, 2.35rem);
-  font-weight: 600;
-  letter-spacing: -0.035em;
-  line-height: 1.35;
-}
-
-.about-copy {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.about-copy p + p {
-  margin-top: 20px;
-}
-
-.about-copy .text-link {
-  color: var(--ink);
-  margin-top: 28px;
-}
-
-.stats {
-  border-bottom: 1px solid var(--line);
-  border-top: 1px solid var(--line);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 90px;
-}
-
-.stat {
-  align-items: center;
-  display: flex;
-  gap: 22px;
-  padding: 34px;
-}
-
-.stat + .stat {
-  border-left: 1px solid var(--line);
-}
-
-.stat strong {
-  color: var(--blue);
-  font-size: clamp(2rem, 3.8vw, 3.4rem);
-  letter-spacing: -0.06em;
-}
-
-.stat span {
-  color: var(--muted);
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  line-height: 1.7;
-}
-
 .skills-section,
 .experience-section {
   background: var(--white);
@@ -1013,11 +950,6 @@ footer {
     width: 85%;
   }
 
-  .about-grid {
-    gap: 50px;
-    grid-template-columns: 1fr;
-  }
-
   .contact-orbit {
     opacity: 0.55;
     right: -220px;
@@ -1067,20 +999,6 @@ footer {
     align-items: flex-start;
     flex-direction: column;
     gap: 22px;
-  }
-
-  .stats {
-    grid-template-columns: 1fr;
-    margin-top: 60px;
-  }
-
-  .stat {
-    padding: 24px 10px;
-  }
-
-  .stat + .stat {
-    border-left: 0;
-    border-top: 1px solid var(--line);
   }
 
   .skill-row {
