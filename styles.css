@@ -70,6 +70,31 @@ a {
   z-index: 50;
 }
 
+.walking-cat {
+  bottom: -2px;
+  height: 32px;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+
+.cat-runner {
+  animation: cat-walk 18s linear infinite;
+  display: block;
+  position: absolute;
+  will-change: transform;
+}
+
+.cat-runner > span {
+  animation: cat-step 0.42s ease-in-out infinite alternate;
+  display: block;
+  filter: drop-shadow(0 4px 5px rgba(16, 26, 48, 0.18));
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
 .brand {
   align-items: center;
   display: flex;
@@ -951,6 +976,26 @@ footer {
   }
 }
 
+@keyframes cat-walk {
+  from {
+    transform: translateX(calc(100vw + 50px));
+  }
+
+  to {
+    transform: translateX(-60px);
+  }
+}
+
+@keyframes cat-step {
+  from {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  to {
+    transform: translateY(-3px) rotate(2deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -962,6 +1007,10 @@ footer {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .walking-cat {
+    display: none;
   }
 }
 
@@ -1046,6 +1095,14 @@ footer {
   .site-header {
     height: 68px;
     padding: 0 20px;
+  }
+
+  .walking-cat {
+    height: 26px;
+  }
+
+  .cat-runner > span {
+    font-size: 1.25rem;
   }
 
   .hero {
