@@ -257,28 +257,24 @@ a {
 
 .blue-sphere {
   align-items: center;
-  background:
-    radial-gradient(circle at 33% 24%, #77a9ff 0, #2a70fb 25%, #0748c9 70%);
+  background: var(--blue);
   border-radius: 50%;
-  box-shadow:
-    0 35px 70px rgba(21, 93, 252, 0.28),
-    inset -20px -20px 45px rgba(0, 34, 125, 0.32);
+  box-shadow: 0 35px 70px rgba(21, 93, 252, 0.24);
   display: flex;
   height: 62%;
   justify-content: center;
   left: 19%;
   overflow: hidden;
-  padding: 12px;
   position: absolute;
   top: 19%;
   width: 62%;
 }
 
 .blue-sphere::after {
-  border: 1px solid rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.38);
   border-radius: 50%;
   content: "";
-  inset: 12px;
+  inset: 0;
   pointer-events: none;
   position: absolute;
   z-index: 2;
