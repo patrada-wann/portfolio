@@ -1378,6 +1378,100 @@ a {
   border-color: #e66f9d;
 }
 
+.database-project {
+  background: #f8faff;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 25px 65px rgba(25, 49, 90, 0.08);
+  margin-top: 42px;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 52px);
+}
+
+.database-intro {
+  align-items: end;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: minmax(350px, 1.15fr) minmax(300px, 0.85fr);
+}
+
+.database-label {
+  color: var(--blue);
+  font-family: var(--mono);
+  font-size: 0.57rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 15px;
+}
+
+.database-intro h3 {
+  font-size: clamp(2rem, 4.3vw, 4.5rem);
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+}
+
+.database-description {
+  display: grid;
+  gap: 12px;
+}
+
+.database-description p:first-child {
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.database-description p:last-child {
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.8;
+}
+
+.database-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 34px 0;
+}
+
+.database-tags span {
+  border: 1px solid #cfdcf5;
+  border-radius: 99px;
+  color: #43618f;
+  font-family: var(--mono);
+  font-size: 0.5rem;
+  padding: 8px 12px;
+}
+
+.database-diagram {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.database-diagram img {
+  display: block;
+  height: auto;
+  padding: clamp(12px, 2vw, 28px);
+  width: 100%;
+}
+
+.database-diagram figcaption {
+  align-items: center;
+  border-top: 1px solid var(--line);
+  display: flex;
+  font-size: 0.67rem;
+  font-weight: 700;
+  gap: 13px;
+  padding: 15px 18px;
+}
+
+.database-diagram figcaption span {
+  color: var(--blue);
+  font-family: var(--mono);
+  font-size: 0.52rem;
+}
+
 .experience-label {
   color: var(--blue);
   font-family: var(--mono);
@@ -1810,6 +1904,12 @@ footer {
   .roomie-demo {
     grid-column: 1 / -1;
     justify-self: start;
+  }
+
+  .database-intro {
+    align-items: start;
+    gap: 24px;
+    grid-template-columns: 1fr;
   }
 
   .expertise-grid {
