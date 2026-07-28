@@ -1207,6 +1207,177 @@ a {
   outline: none;
 }
 
+.roomie-project {
+  background: #f8f7f2;
+  border: 1px solid #deddd7;
+  border-radius: 22px;
+  box-shadow: 0 25px 65px rgba(25, 49, 90, 0.08);
+  margin-top: 42px;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 52px);
+}
+
+.roomie-intro {
+  align-items: end;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: minmax(210px, 0.7fr) minmax(320px, 1.3fr) auto;
+}
+
+.roomie-label {
+  color: #e66f9d;
+  font-family: var(--mono);
+  font-size: 0.57rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.roomie-intro h3 {
+  font-size: clamp(2.6rem, 5vw, 5.2rem);
+  letter-spacing: -0.065em;
+  line-height: 0.9;
+}
+
+.roomie-intro h3 span {
+  color: #e66f9d;
+}
+
+.roomie-description {
+  display: grid;
+  gap: 11px;
+}
+
+.roomie-description p {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+.roomie-demo {
+  align-items: center;
+  background: #191917;
+  border-radius: 99px;
+  color: var(--white);
+  display: inline-flex;
+  font-size: 0.72rem;
+  font-weight: 700;
+  gap: 20px;
+  padding: 8px 9px 8px 20px;
+  white-space: nowrap;
+}
+
+.roomie-demo span {
+  align-items: center;
+  background: #c8f2e3;
+  border-radius: 50%;
+  color: #191917;
+  display: inline-flex;
+  font-size: 0.9rem;
+  height: 34px;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  width: 34px;
+}
+
+.roomie-demo:hover span,
+.roomie-demo:focus-visible span {
+  transform: rotate(45deg);
+}
+
+.roomie-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 34px 0 46px;
+}
+
+.roomie-features span {
+  border: 1px solid #d6d5cf;
+  border-radius: 99px;
+  color: #65655f;
+  font-family: var(--mono);
+  font-size: 0.5rem;
+  padding: 8px 12px;
+}
+
+.roomie-gallery-header p span,
+.roomie-gallery-header .gallery-hint b {
+  color: #e66f9d;
+}
+
+.roomie-gallery {
+  display: flex;
+  gap: 22px;
+  margin-inline: calc(clamp(24px, 4vw, 52px) * -1);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding: 8px clamp(24px, 4vw, 52px) 24px;
+  scroll-behavior: smooth;
+  scroll-padding-inline: clamp(24px, 4vw, 52px);
+  scroll-snap-type: x mandatory;
+  scrollbar-color: #e66f9d #f4dfe7;
+  scrollbar-width: thin;
+}
+
+.roomie-gallery:focus-visible {
+  outline: 2px solid #e66f9d;
+  outline-offset: 5px;
+}
+
+.roomie-gallery::-webkit-scrollbar {
+  height: 7px;
+}
+
+.roomie-gallery::-webkit-scrollbar-track {
+  background: #f4dfe7;
+  border-radius: 99px;
+}
+
+.roomie-gallery::-webkit-scrollbar-thumb {
+  background: #e66f9d;
+  border-radius: 99px;
+}
+
+.roomie-slide {
+  background: #f6f5f1;
+  border: 1px solid #deddd7;
+  border-radius: 16px;
+  flex: 0 0 min(88vw, 920px);
+  overflow: hidden;
+  scroll-margin-inline: clamp(24px, 4vw, 52px);
+  scroll-snap-align: start;
+}
+
+.roomie-slide img {
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: contain;
+  width: 100%;
+}
+
+.roomie-slide figcaption {
+  align-items: center;
+  background: var(--white);
+  border-top: 1px solid var(--line);
+  display: flex;
+  font-size: 0.68rem;
+  font-weight: 700;
+  gap: 12px;
+  padding: 15px 18px;
+}
+
+.roomie-slide figcaption span {
+  color: #e66f9d;
+  font-family: var(--mono);
+  font-size: 0.55rem;
+}
+
+.roomie-gallery-index a:hover,
+.roomie-gallery-index a:focus-visible {
+  background: #e66f9d;
+  border-color: #e66f9d;
+}
+
 .timeline {
   border-top: 1px solid var(--line);
 }
@@ -1481,6 +1652,16 @@ footer {
     flex-wrap: wrap;
     grid-column: 1 / -1;
   }
+
+  .roomie-intro {
+    align-items: start;
+    grid-template-columns: 0.75fr 1.25fr;
+  }
+
+  .roomie-demo {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
 }
 
 @media (max-width: 700px) {
@@ -1592,6 +1773,27 @@ footer {
 
   .pricewise-slide img {
     height: min(64vh, 620px);
+  }
+
+  .roomie-project {
+    border-radius: 16px;
+  }
+
+  .roomie-intro {
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .roomie-demo {
+    grid-column: auto;
+  }
+
+  .roomie-features {
+    margin-bottom: 36px;
+  }
+
+  .roomie-slide {
+    flex-basis: 88vw;
   }
 
   .skill-row p {
