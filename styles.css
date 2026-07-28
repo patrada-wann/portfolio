@@ -620,17 +620,28 @@ a {
   border-bottom: 1px solid var(--line);
 }
 
+.certificate-list {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .certificate-card {
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 18px;
   box-shadow: 0 25px 65px rgba(25, 49, 90, 0.09);
   display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(300px, 0.85fr);
+  grid-template-columns: 1fr;
   overflow: hidden;
   transition:
     box-shadow 0.3s ease,
     transform 0.3s ease;
+}
+
+.certificate-card--featured {
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1.6fr) minmax(300px, 0.85fr);
 }
 
 .certificate-card:hover {
@@ -646,6 +657,10 @@ a {
   padding: 18px;
 }
 
+.certificate-preview--light {
+  background: #f4f4f2;
+}
+
 .certificate-preview img {
   border: 1px solid rgba(255, 255, 255, 0.16);
   display: block;
@@ -658,6 +673,10 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 32px;
+}
+
+.certificate-card--featured .certificate-details {
   padding: 42px;
 }
 
@@ -1326,6 +1345,14 @@ footer {
   }
 
   .certificate-card {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-card--featured {
+    grid-column: auto;
+  }
+
+  .certificate-list {
     grid-template-columns: 1fr;
   }
 
