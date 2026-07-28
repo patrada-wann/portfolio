@@ -1472,6 +1472,255 @@ a {
   font-size: 0.52rem;
 }
 
+.truthlens-project {
+  background: #101512;
+  border: 1px solid #252d28;
+  border-radius: 22px;
+  box-shadow: 0 28px 70px rgba(8, 16, 11, 0.2);
+  color: var(--white);
+  margin-top: 42px;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 52px);
+}
+
+.truthlens-intro {
+  align-items: end;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: minmax(340px, 1fr) minmax(320px, 1fr);
+}
+
+.truthlens-label {
+  color: #bdff2f;
+  font-family: var(--mono);
+  font-size: 0.57rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 15px;
+}
+
+.truthlens-intro h3 {
+  font-size: clamp(2.4rem, 5vw, 5.1rem);
+  letter-spacing: -0.065em;
+  line-height: 0.92;
+}
+
+.truthlens-description {
+  display: grid;
+  gap: 12px;
+}
+
+.truthlens-description p {
+  color: #b9c1bc;
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+
+.truthlens-description p:first-child {
+  color: var(--white);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.truthlens-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 34px 0;
+}
+
+.truthlens-tags span {
+  border: 1px solid #3b4740;
+  border-radius: 99px;
+  color: #d9dfdb;
+  font-family: var(--mono);
+  font-size: 0.48rem;
+  padding: 8px 12px;
+}
+
+.truthlens-summary {
+  border-bottom: 1px solid #3b4740;
+  border-top: 1px solid #3b4740;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.truthlens-summary > div {
+  display: grid;
+  padding: 22px 0;
+}
+
+.truthlens-summary > div + div {
+  border-left: 1px solid #3b4740;
+  padding-left: 24px;
+}
+
+.truthlens-summary span,
+.truthlens-summary small {
+  color: #95a099;
+  font-family: var(--mono);
+  font-size: 0.45rem;
+  letter-spacing: 0.08em;
+}
+
+.truthlens-summary strong {
+  color: #bdff2f;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  margin: 8px 0 3px;
+}
+
+.truthlens-metrics {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 28px 0 45px;
+}
+
+.truthlens-metrics > div {
+  background: #19201c;
+  display: grid;
+  min-height: 150px;
+  padding: 18px;
+}
+
+.truthlens-metrics span {
+  color: #bdff2f;
+  font-family: var(--mono);
+  font-size: 0.46rem;
+}
+
+.truthlens-metrics strong {
+  align-self: end;
+  font-size: clamp(1.45rem, 3vw, 2.6rem);
+  letter-spacing: -0.05em;
+}
+
+.truthlens-metrics small {
+  color: #aab3ad;
+  font-size: 0.58rem;
+  margin-top: 3px;
+}
+
+.truthlens-gallery-header {
+  border-color: #3b4740;
+}
+
+.truthlens-gallery-header p {
+  color: #aab3ad;
+}
+
+.truthlens-gallery-header p span,
+.truthlens-gallery-header .gallery-hint b {
+  color: #bdff2f;
+}
+
+.truthlens-gallery {
+  display: flex;
+  gap: 22px;
+  margin-inline: calc(clamp(24px, 4vw, 52px) * -1);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding: 8px clamp(24px, 4vw, 52px) 24px;
+  scroll-behavior: smooth;
+  scroll-padding-inline: clamp(24px, 4vw, 52px);
+  scroll-snap-type: x mandatory;
+  scrollbar-color: #bdff2f #303a34;
+  scrollbar-width: thin;
+}
+
+.truthlens-gallery:focus-visible {
+  outline: 2px solid #bdff2f;
+  outline-offset: 5px;
+}
+
+.truthlens-gallery::-webkit-scrollbar {
+  height: 7px;
+}
+
+.truthlens-gallery::-webkit-scrollbar-track {
+  background: #303a34;
+  border-radius: 99px;
+}
+
+.truthlens-gallery::-webkit-scrollbar-thumb {
+  background: #bdff2f;
+  border-radius: 99px;
+}
+
+.truthlens-slide {
+  background: #f4f1e8;
+  border: 1px solid #3b4740;
+  border-radius: 16px;
+  flex: 0 0 min(88vw, 920px);
+  overflow: hidden;
+  scroll-margin-inline: clamp(24px, 4vw, 52px);
+  scroll-snap-align: start;
+}
+
+.truthlens-slide img {
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: contain;
+  width: 100%;
+}
+
+.truthlens-slide figcaption {
+  align-items: center;
+  background: #19201c;
+  border-top: 1px solid #3b4740;
+  display: flex;
+  font-size: 0.67rem;
+  font-weight: 700;
+  gap: 12px;
+  padding: 15px 18px;
+}
+
+.truthlens-slide figcaption span {
+  color: #bdff2f;
+  font-family: var(--mono);
+  font-size: 0.52rem;
+}
+
+.truthlens-gallery-index a {
+  border-color: #3b4740;
+  color: #aab3ad;
+}
+
+.truthlens-gallery-index a:hover,
+.truthlens-gallery-index a:focus-visible {
+  background: #bdff2f;
+  border-color: #bdff2f;
+  color: #101512;
+}
+
+.truthlens-note {
+  align-items: center;
+  background: #ff6554;
+  color: #101512;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: auto 1fr;
+  margin: 35px calc(clamp(24px, 4vw, 52px) * -1) calc(clamp(24px, 4vw, 52px) * -1);
+  padding: 26px clamp(24px, 4vw, 52px);
+}
+
+.truthlens-note > span {
+  align-items: center;
+  border: 1px solid #101512;
+  border-radius: 50%;
+  display: flex;
+  font-family: var(--mono);
+  height: 38px;
+  justify-content: center;
+  width: 38px;
+}
+
+.truthlens-note p {
+  font-size: 0.7rem;
+  line-height: 1.65;
+  max-width: 900px;
+}
+
 .experience-label {
   color: var(--blue);
   font-family: var(--mono);
@@ -1969,6 +2218,12 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .truthlens-intro {
+    align-items: start;
+    gap: 24px;
+    grid-template-columns: 1fr;
+  }
+
   .expertise-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2108,6 +2363,36 @@ footer {
 
   .roomie-slide {
     flex-basis: 88vw;
+  }
+
+  .truthlens-project {
+    border-radius: 16px;
+  }
+
+  .truthlens-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .truthlens-summary > div + div {
+    border-left: 0;
+    border-top: 1px solid #3b4740;
+    padding-left: 0;
+  }
+
+  .truthlens-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .truthlens-metrics > div {
+    min-height: 125px;
+  }
+
+  .truthlens-slide {
+    flex-basis: 88vw;
+  }
+
+  .truthlens-note {
+    align-items: start;
   }
 
   .education-card {
