@@ -1670,20 +1670,48 @@ a {
   color: var(--blue);
 }
 
-.contact-email {
-  align-items: center;
-  border-bottom: 1px solid var(--ink);
-  display: inline-flex;
-  font-size: clamp(1rem, 2vw, 1.4rem);
-  font-weight: 600;
-  gap: 40px;
-  padding-bottom: 9px;
+.contact-details {
+  display: grid;
+  max-width: 850px;
   position: relative;
   z-index: 2;
 }
 
-.contact-email span {
+.contact-detail {
+  align-items: center;
+  border-top: 1px solid var(--ink);
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 75px minmax(0, 1fr) auto;
+  padding: 20px 0;
+}
+
+.contact-detail:last-child {
+  border-bottom: 1px solid var(--ink);
+}
+
+.contact-detail > span {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.54rem;
+  letter-spacing: 0.1em;
+}
+
+.contact-detail strong {
+  font-size: clamp(1rem, 2.6vw, 2rem);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.contact-detail b {
   color: var(--blue);
+  font-size: 1.25rem;
+  transition: transform 0.2s ease;
+}
+
+.contact-detail:hover b,
+.contact-detail:focus-visible b {
+  transform: rotate(45deg);
 }
 
 .contact-orbit {
@@ -2124,6 +2152,19 @@ footer {
 
   .contact h2 {
     font-size: clamp(3rem, 15vw, 5rem);
+  }
+
+  .contact-detail {
+    gap: 8px 16px;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .contact-detail > span {
+    grid-column: 1 / -1;
+  }
+
+  .contact-detail strong {
+    font-size: clamp(0.9rem, 5.2vw, 1.25rem);
   }
 
   .contact-footer {
