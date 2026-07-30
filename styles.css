@@ -355,6 +355,14 @@ a {
   line-height: 1.85;
 }
 
+.hero-intro p + p {
+  margin-top: 12px;
+}
+
+.hero-intro strong {
+  color: var(--ink);
+}
+
 .hero-actions {
   align-items: center;
   display: flex;
